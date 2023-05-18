@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primer Proyecto de Tailwind</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+
+  <body>
+    <div class="  mx-auto">
+      <nav class="bg-gray-800 flex justify-between lg:justify-start  items-center">
+        <div class="logo p-2  w-1/6"  >
+          <img src="img/logo.png" width="100" alt="logo" />
+        </div>
+
+        <!-- Menu navegacion de pantallas a partir de LG -->
+        <div class="links lg:block hidden w-1/6 md:w-4/6 ">
+          <ul  class="menu flex items-center justify-center gap-5">
+            <li>
+              <a href="#" class="link">Home</a>
+            </li>
+            <li>
+              <a href="#" class="link">PLay Together</a>
+            </li>
+            <li>
+              <a href="#" class="link">Explore</a>
+            </li>
+            <li>
+              <a href="#" class="border-4 border-yellow-400 text-white font-bold p-2 rounded-full hover:bg-white hover:text-gray-800 transition duration-500 ">Bowser Fury</a>
+            </li>
+            <li>
+              <a href="#" class="rounded-full bg-red-500 text-white font-bold px-3 py-2 hover:bg-white hover:text-red-500 transition duration-500">Buy Now</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Menu navegacion de pantallas sm y md (Mobile y tablet) -->
+        <div class="block lg:hidden w-1/6 lg:w-4/6 ">
+            <a href="#" class="link" id="mobile-menu">menu</a>
+            <ul  class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800">
+              <li>
+                <a href="#" class="link">Home</a>
+              </li>
+              <li>
+                <a href="#" class="link">PLay Together</a>
+              </li>
+              <li>
+                <a href="#" class="link">Explore</a>
+              </li>
+              <li>
+                <a href="#" class="border-4 border-yellow-400 text-white font-bold p-2 rounded-full hover:bg-white hover:text-gray-800 transition duration-500 ">Bowser Fury</a>
+              </li>
+              <li>
+                <a href="#" class="rounded-full bg-red-500 text-white font-bold px-3 py-2 hover:bg-white hover:text-red-500 transition duration-500">Buy Now</a>
+              </li>
+            </ul>
+          </div>
+        
+
+
+      </nav>
+    </div>
+    <script>
+        const menuBotton = document.querySelector('#mobile-menu')
+        menuBotton.addEventListener('click',(e)=>{
+            const menu1 = document.querySelector('.mobile-links')
+            menu1.classList.toggle('hidden')
+        })
+    </script>
+
+
+  </body>
+</html>
